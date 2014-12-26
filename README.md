@@ -57,3 +57,17 @@ In moving to the current version, Orleans reinforces the current trend of not ex
 [v] However, Orleans does still surface customers using lower level primitives.
 
 -
+
+
+Usage
+-----
+
+### Install
+
+  npm install
+
+### Run
+
+  npm start
+  open http://localhost:8080/
+
