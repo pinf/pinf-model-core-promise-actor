@@ -1,7 +1,7 @@
 pinf-model-promise-actor
 ========================
 
-An exploration of using promises to implement the actor model inspired by [friam - Actors in Orleans](https://groups.google.com/d/msg/friam/5BZWwmMy_80/2jAWrwokE74J):
+An exploration of using promises and the actor model to implement the pinf core event loop inspired by [friam - Actors in Orleans](https://groups.google.com/d/msg/friam/5BZWwmMy_80/2jAWrwokE74J):
 
 -
 
@@ -13,9 +13,13 @@ Orleans [Bernstein, Bykov, Geller, Kliot, and Thelin 2014] is based on single-th
   4. A message sent to an Orleans Actor must return a promise[ii] [Liskov and Shira 1988; Miller, Tribble, and Shapiro 2005], which is a version of a future[Baker and Hewitt 1977].  A promise for the value of  anExpression can be created using Task.FromResult(anExpression)[2] and aPromise can be resolved using  await aPromise[3]. For example:
 ````
     var anActor = aFactory.GetActor(aGloballyUniqueIdentifier);
-    try {...aUse(await anActor.aMethodName(...))...
-      anotherUse(await anActor.anotherMethodName(...))...}
-    catch ...;[4]
+    try {
+      ...
+      aUse(await anActor.aMethodName(...))
+      ...
+      anotherUse(await anActor.anotherMethodName(...))
+      ...
+    } catch ... ; [4]
 ````
 When reentrancy[iii] is enabled, the method calls for aMethodName and anotherMethodName above are executed after the current message-processing turn. 
 
@@ -34,9 +38,13 @@ In moving to the current version, Orleans reinforces the current trend of not ex
 
 [4] In ActorScript the program is:
 ````
-    Try ...aUse(⦷anActor.aMethodName(...))...
-      anotherUse(⦷anActor.anotherMethodName(...))...
-    catch ...
+    Try {
+      ...
+      aUse(⦷anActor.aMethodName(...))
+      ...
+      anotherUse(⦷anActor.anotherMethodName(...))
+      ...
+    catch ... ;
 ````
 [i] Also, a reference for an Orleans Actor can be created from a C# objectAddress using aFactory.CreateObjectReference(objectAddress).
 
