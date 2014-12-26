@@ -1,7 +1,7 @@
 pinf-model-promise-actor
 ========================
 
-An exploration of using promises to implement the actor model inspired by [friam - Actors in Orleans](https://groups.google.com/d/msg/friam/5BZWwmMy_80/2jAWrwokE74J):
+An exploration of using promises and the actor model to implement the pinf core event loop inspired by [friam - Actors in Orleans](https://groups.google.com/d/msg/friam/5BZWwmMy_80/2jAWrwokE74J):
 
 -
 
