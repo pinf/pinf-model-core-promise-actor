@@ -1,0 +1,15 @@
+{
+  "uid": "github.com/pinf/pinf-model-promise-actor/client",
+  "main": "./client.js",
+  "dependencies": {
+    "q": "~1.1.2"
+  },
+  "mappings": {
+  	"q": "./node_modules/q"
+  },
+  "exports": {
+    "bundles": {
+      "client.js": "./client.js"
+    }
+  }
+}

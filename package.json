@@ -1,0 +1,10 @@
+{
+  "uid": "github.com/pinf/pinf-model-promise-actor",
+  "name": "pinf-model-promise-actor",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "install": "cd client ; npm install ; cd .. ; cd server ; npm install ; cd ..",
+    "start": "cd server ; node server.js"
+  }
+}
