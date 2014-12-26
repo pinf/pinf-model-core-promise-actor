@@ -64,10 +64,10 @@ Usage
 
 ### Install
 
-  npm install
+    npm install
 
 ### Run
 
-  npm start
-  open http://localhost:8080/
+    npm start
+    open http://localhost:8080/
 
