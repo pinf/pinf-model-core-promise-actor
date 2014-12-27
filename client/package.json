@@ -5,7 +5,9 @@
     "q": "~1.1.2"
   },
   "mappings": {
-  	"q": "./node_modules/q"
+    "q": "./node_modules/q",
+    "primitives": "../primitives",
+    "fireconsole.widget.console": "./node_modules/fireconsole.widget.console"
   },
   "exports": {
     "bundles": {

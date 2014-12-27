@@ -5,6 +5,6 @@
   "private": true,
   "scripts": {
     "install": "cd client ; npm install ; cd .. ; cd server ; npm install ; cd ..",
-    "start": "cd server ; node server.js"
+    "start": "rm -Rf client/.rt ; cd server ; node server.js"
   }
 }

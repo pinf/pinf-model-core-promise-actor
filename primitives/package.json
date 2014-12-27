@@ -1,0 +1,6 @@
+{
+  "uid": "github.com/pinf/pinf-model-promise-actor/primitives",
+  "mappings": {
+    "q": "../client/node_modules/q"
+  }
+}
